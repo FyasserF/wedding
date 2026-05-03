@@ -1,37 +1,42 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import './App.css'
 import { Countdown } from './components/Countdown'
 import Welcome from './components/Welcome'
+import Location from "./components/Location";
 
 function App() {
   const audioRef = useRef(null);
 
-  const startMusic = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
-  };
+  // useEffect(() => {
+  //   const audio = audioRef.current;
+  //   if (!audio) return;
+
+  //   audio.muted = true;
+
+  //   audio.play().then(() => {
+  //     // try to unmute after a delay
+  //     setTimeout(() => {
+  //       audio.muted = false;
+  //     }, 1000);
+  //   }).catch(() => { });
+  // }, []);
 
   return (
     <>
-      <audio ref={audioRef} loop>
+      {/* <audio ref={audioRef} loop>
         <source src="/music.mp3" type="audio/mpeg" />
-      </audio>
+      </audio> */}
 
       {/* Hero */}
-      <div onClick={startMusic}>
+      <div>
         <div className='hero'>
-          {/* Couple video on the background */}
-          {/* Text on the center */}
         </div>
-        {/* Welcome */}
+
         <Welcome />
 
-        {/* contdown */}
         <Countdown />
 
-
-        {/* location */}
+        <Location />
       </div>
     </>
   )
