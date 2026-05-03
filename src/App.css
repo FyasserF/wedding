@@ -1,184 +1,221 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
 
 .hero {
+  background-color: rgba(255, 255, 255, 0.307);
+  height: 100vh;
+}
+
+.welcome {
+  background-color: rgb(248, 240, 231);
+  padding: 30px 0;
   position: relative;
 
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
+  .cadre {
     position: absolute;
-  }
+    top: 0;
+    left: 0;
+    width: 100px;
 
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
+    img {
+      width: 100%;
     }
   }
 
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
+  .separater {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+
+    .heart {
+      color: #bd8e6f;
+      font-size: 20px;
+    }
+
+    hr {
+      width: 50px;
+      height: 1px;
+      background-color: #bd8e6f;
+      border: 0;
+      margin: 0;
+    }
   }
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
+  .separater-bridge {
+    width: 200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .img {
+    width: 60%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    font-family: "Amiri", serif;
+    margin: 0;
+    direction: rtl;
+    unicode-bidi: embed;
+
+    font-size: 1.1rem;
+    line-height: 2;
+
+    color: #734317;
     text-align: center;
   }
-}
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
+  .body {
+    h2 {
+      margin-top: 1rem;
+      font-family: "Amiri", serif;
+      font-size: 45px;
+      font-style: italic;
+      color: var(--cocoa);
     }
   }
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+:root {
+  --cocoa: #4b3f35;
+  --mocha: #6b5e53;
 }
 
-.ticks {
+.countdown-section {
+  padding: 7rem 1.5rem;
   position: relative;
-  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8dccb, #7a5a44);
+  color: #ffffff;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
+.countdown-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+
+  .countdown-subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: bold;
   }
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+  .countdown-title {
+    margin-top: 1rem;
+    font-family: serif;
+    font-size: 45px;
+    font-style: italic;
+    color: var(--cocoa);
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+
+  .countdown-grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .countdown-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 8px;
+    padding: 2.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.837);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .countdown-value {
+    font-family: serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-label {
+    margin-top: 0.75rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+  }
+}
+
+.flower {
+  position: absolute;
+  width: 220px;
+  height: auto;
+
+  opacity: 0.10;
+  pointer-events: none;
+
+  z-index: 0;
+
+  filter: blur(0.2px);
+}
+
+.flower-1 {
+  top: -40px;
+  left: -60px;
+  transform: rotate(20deg);
+}
+
+.flower-2 {
+  top: 20%;
+  right: -80px;
+  width: 260px;
+  transform: rotate(-25deg);
+}
+
+.flower-3 {
+  bottom: -90px;
+  left: 10%;
+  width: 280px;
+  transform: rotate(10deg);
+}
+
+.flower-4 {
+  top: 55%;
+  left: 50%;
+  width: 180px;
+  transform: rotate(-10deg);
+}
+
+
+@media (min-width: 768px) {
+  .countdown-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .countdown-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .countdown-value {
+    font-size: 3.75rem;
   }
 }
