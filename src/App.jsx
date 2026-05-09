@@ -66,8 +66,8 @@ export default function App() {
 
   return (
     <>
-      <audio ref={audioRef} loop>
-        <source src="/music.mp4" type="audio/mpeg" />
+      <audio ref={audioRef} loop playsInline>
+        <source src="/music.mp4" type="audio/mp4" />
       </audio>
 
       <AnimatePresence>
