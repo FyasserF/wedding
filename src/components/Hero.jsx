@@ -23,8 +23,6 @@ export default function Hero() {
                     Chaque histoire d’amour est belle,
                     <br />
                     mais nous préférons la nôtre.”
-                    <br />
-                    20/06/2026 à 17h
                 </p>
 
                 <div className="hero-divider" />

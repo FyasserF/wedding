@@ -63,7 +63,7 @@ export default function Welcome() {
             >
                 <h2>Majda & Moncef</h2>
                 <h3>Samedi</h3>
-                <h3>20/06/2026 17h00</h3>
+                <h3>20/06/2026 à 17h</h3>
             </motion.div>
 
             <motion.div
