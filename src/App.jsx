@@ -5,6 +5,7 @@ import Welcome from "./components/Welcome";
 import { Countdown } from "./components/Countdown";
 import Location from "./components/Location";
 import { IoMdMusicalNote } from "react-icons/io";
+import Hero from "./components/Hero";
 
 export default function App() {
 
@@ -137,8 +138,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            <div className="hero" />
-
+            <Hero />
             <Welcome />
             <Countdown />
             <Location />
