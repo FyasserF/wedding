@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Hero.css";
 
 export default function Hero() {
     return (
@@ -16,7 +15,7 @@ export default function Hero() {
             </video>
 
             {/* Dark Overlay */}
-            <div className="hero-overlay" />
+            {/* <div className="hero-overlay" /> */}
 
             {/* Center Content */}
             <div className="hero-content">

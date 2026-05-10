@@ -309,6 +309,7 @@
 
   backdrop-filter: blur(6px);
   transition: all 0.3s ease;
+  z-index: 99;
 }
 
 .music-btn:hover {
@@ -516,7 +517,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.2);
 }
 
 /* Overlay */

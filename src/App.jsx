@@ -68,7 +68,7 @@ export default function App() {
   return (
     <>
       <audio ref={audioRef} loop playsInline>
-        <source src="/music.mp4" type="audio/mp4" />
+        <source src="/music.mp3" type="audio/mp4" />
       </audio>
 
       <AnimatePresence>
@@ -133,7 +133,6 @@ export default function App() {
       <AnimatePresence>
         {showLanding && (
           <motion.div
-            // className="landing-page"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
