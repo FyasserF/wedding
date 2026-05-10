@@ -1,9 +1,28 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+
+const fade = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.25,
+            ease: "easeOut",
+        },
+    },
+};
 
 export default function Location() {
     return (
-        <div className='location'>
+        <motion.div
+            className="location"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fade}
+        >
             <h2>Où célébrons-nous ?</h2>
+
             <div className="card">
                 <h3>Palais KZY</h3>
                 <h3>17h00</h3>
@@ -14,13 +33,13 @@ export default function Location() {
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
-                        allowFullScreen=""
+                        allowFullScreen
                         loading="lazy"
-                    ></iframe>
+                    />
                 </div>
             </div>
 
             <h4>On compte sur vous !</h4>
-        </div>
-    )
+        </motion.div>
+    );
 }
