@@ -20,9 +20,11 @@ export default function Hero() {
             {/* Center Content */}
             <div className="hero-content">
                 <p className="hero-story">
-                    “Chaque histoire d’amour est belle,
+                    Chaque histoire d’amour est belle,
                     <br />
-                    mais la nôtre est notre préférée.”
+                    mais nous préférons la nôtre.”
+                    <br />
+                    20/06/2026 à 17h
                 </p>
 
                 <div className="hero-divider" />
